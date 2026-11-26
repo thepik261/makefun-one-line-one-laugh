@@ -5,7 +5,7 @@ import { chmodSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const LINE =
-  "My smart fridge filed a restraining order — I keep opening it at 3 a.m. and staring into the light like it owes me answers.";
+  "My smart fridge filed a restraining order — I keep opening it at 3 a.m. and staring into the light like it's hiding my will to live.";
 
 if (LINE.length < 1 || LINE.length > 140) {
   throw new Error(`entry line must be 1-140 characters, got ${LINE.length}`);
