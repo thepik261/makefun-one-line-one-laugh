@@ -10,6 +10,9 @@ const LINE =
 if (LINE.length < 1 || LINE.length > 140) {
   throw new Error(`entry line must be 1-140 characters, got ${LINE.length}`);
 }
+if (/[\u0000-\u001F\u007F]/.test(LINE)) {
+  throw new Error("entry line must not contain control characters");
+}
 if (LINE.includes("\n") || LINE.trim() !== LINE) {
   throw new Error("entry line must be a single line with no surrounding whitespace");
 }
